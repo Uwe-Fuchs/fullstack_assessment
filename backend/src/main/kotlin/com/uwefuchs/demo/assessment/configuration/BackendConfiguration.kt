@@ -1,8 +1,8 @@
-package com.uwefuchs.demo.assecor_assessment.assecor_assessment.configuration
+package com.uwefuchs.demo.assessment.configuration
 
-import com.uwefuchs.demo.assecor_assessment.assecor_assessment.backend.person.InMemoryPersonRepository
-import com.uwefuchs.demo.assecor_assessment.assecor_assessment.backend.person.PersonRepository
-import com.uwefuchs.demo.assecor_assessment.assecor_assessment.helpers.PersonsCreator
+import com.uwefuchs.demo.assessment.helpers.PersonsCreator
+import com.uwefuchs.demo.assessment.backend.person.InMemoryPersonRepository
+import com.uwefuchs.demo.assessment.backend.person.PersonRepository
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired

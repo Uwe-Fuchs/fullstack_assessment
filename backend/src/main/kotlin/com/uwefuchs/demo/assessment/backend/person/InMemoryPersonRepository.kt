@@ -1,6 +1,6 @@
-package com.uwefuchs.demo.assecor_assessment.assecor_assessment.backend.person
+package com.uwefuchs.demo.assessment.backend.person
 
-import com.uwefuchs.demo.assecor_assessment.assecor_assessment.backend.color.Color
+import com.uwefuchs.demo.assessment.backend.color.Color
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import java.util.Optional

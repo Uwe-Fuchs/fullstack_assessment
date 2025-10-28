@@ -1,4 +1,4 @@
-package com.uwefuchs.demo.assecor_assessment.assecor_assessment.backend.color
+package com.uwefuchs.demo.assessment.backend.color
 
 import jakarta.persistence.AttributeConverter
 import jakarta.persistence.Converter

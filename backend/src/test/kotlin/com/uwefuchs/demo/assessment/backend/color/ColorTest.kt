@@ -1,7 +1,7 @@
-package com.uwefuchs.demo.assecor_assessment.assecor_assessment.backend.color
+package com.uwefuchs.demo.assessment.backend.color
 
+import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
-import org.assertj.core.api.Assertions.assertThat
 
 class ColorTest {
     @Test
@@ -13,7 +13,7 @@ class ColorTest {
         val resultColor = Color.findColorById(colorId)
 
         // then
-        assertThat(resultColor).isEqualTo(Color.GELB)
+        Assertions.assertThat(resultColor).isEqualTo(Color.GELB)
     }
 
     @Test
@@ -25,7 +25,7 @@ class ColorTest {
         val resultColor = Color.findColorById(unknownColorId)
 
         // then
-        assertThat(resultColor).isNull()
+        Assertions.assertThat(resultColor).isNull()
     }
 
     @Test
@@ -37,7 +37,7 @@ class ColorTest {
         val resultColor = Color.findColorByColorStr(colorStr)
 
         // then
-        assertThat(resultColor).isEqualTo(Color.GELB)
+        Assertions.assertThat(resultColor).isEqualTo(Color.GELB)
     }
 
     @Test
@@ -49,6 +49,6 @@ class ColorTest {
         val resultColor = Color.findColorByColorStr(unknownColorStr)
 
         // then
-        assertThat(resultColor).isNull()
+        Assertions.assertThat(resultColor).isNull()
     }
 }

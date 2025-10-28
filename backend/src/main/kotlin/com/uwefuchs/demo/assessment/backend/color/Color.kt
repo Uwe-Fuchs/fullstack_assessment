@@ -1,4 +1,4 @@
-package com.uwefuchs.demo.assecor_assessment.assecor_assessment.backend.color
+package com.uwefuchs.demo.assessment.backend.color
 
 enum class Color(val colorId: Int, val colorStr: String) {
     BLAU(1, "blau"),

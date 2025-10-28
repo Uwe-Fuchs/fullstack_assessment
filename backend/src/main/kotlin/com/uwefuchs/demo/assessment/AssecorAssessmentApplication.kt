@@ -1,4 +1,4 @@
-package com.uwefuchs.demo.assecor_assessment.assecor_assessment
+package com.uwefuchs.demo.assessment
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
