@@ -8,5 +8,5 @@ interface PersonRepository {
 
     fun findByColor(color: Color): List<Person>
 
-    fun findById(id: Int): Optional<Person>?
+    fun findById(id: Int): Optional<Person>
 }
