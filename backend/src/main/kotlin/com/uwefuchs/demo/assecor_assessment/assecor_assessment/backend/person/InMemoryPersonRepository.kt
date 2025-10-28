@@ -10,15 +10,15 @@ class InMemoryPersonRepository : PersonRepository {
 
     lateinit var personsDataCache: List<Person>
 
-    override fun findAll(): Iterable<Person> {
+    override fun findAll(): List<Person> {
         return emptyList()
     }
 
-    override fun findByColor(color: Color): Iterable<Person> {
+    override fun findByColor(color: Color): List<Person> {
         return emptyList()
     }
 
-    override fun findById(id: Int): Optional<Person>? {
+    override fun findById(id: Int): Optional<Person> {
         TODO("Not yet implemented")
     }
 }

@@ -4,12 +4,14 @@ import com.uwefuchs.demo.assecor_assessment.assecor_assessment.backend.color.Col
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.annotation.Qualifier
 import java.util.Optional
 
 class PersonServiceImpl : PersonService {
     val logger: Logger = LoggerFactory.getLogger(this.javaClass)
 
     @Autowired
+    @Qualifier("personRepository")
     lateinit var personRepository: PersonRepository
 
     override fun findAllPersons(): List<Person> {
