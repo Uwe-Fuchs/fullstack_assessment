@@ -84,5 +84,3 @@ Das Ausgabeformat der Daten ist als `application/json` festgelegt. Die Schnittst
 * Implementierung als MSBuild Projekt für kontinuierliche Integration auf TFS (C#/.NET) oder als Maven/Gradle Projekt (Java).
 * Anbindung einer zweiten Datenquelle (z.B. Datenbank via Entity Framework).
 
-Denk an deine zukünftigen Kolleg:innen und mach es ihnen nicht zu einfach, indem du deine Lösung öffentlich zur Schau stellst. Danke & viel Spaß!
-
