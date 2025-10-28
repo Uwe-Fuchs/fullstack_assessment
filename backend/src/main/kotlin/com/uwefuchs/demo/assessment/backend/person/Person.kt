@@ -17,10 +17,10 @@ data class Person (
     @Column
     val name: String,
 
-    @Column(name = "last_name")
+    @Column(name = "lastname")
     val lastName: String,
 
-    @Column(name = "zip_code")
+    @Column(name = "zipcode")
     val zipCode: String,
 
     @Column

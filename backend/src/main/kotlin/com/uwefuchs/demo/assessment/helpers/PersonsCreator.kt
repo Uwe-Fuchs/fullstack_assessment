@@ -28,7 +28,7 @@ object PersonsCreator {
             .filter { it.isNotBlank() }
             .filter { item -> item.split(",").size == 4 }
             .map {
-                var (name, lastName, zipCode_city, colorStr) = it.split(",", ignoreCase = false, limit = 4)
+                var (lastName, name, zipCode_city, colorStr) = it.split(",", ignoreCase = false, limit = 4)
                 if (colorStr == "")  colorStr = "-1"
                 val (zipCode, city) = zipCode_city.trim().split(" ", ignoreCase = false, limit = 2)
                 Person(
@@ -37,7 +37,7 @@ object PersonsCreator {
                     lastName.trim(),
                     zipCode.trim(),
                     city.trim(),
-                    Color.Companion.findColorById(colorStr.trim().toInt())
+                    Color.findColorById(colorStr.trim().toInt())
                 )
             }.toList()
 
