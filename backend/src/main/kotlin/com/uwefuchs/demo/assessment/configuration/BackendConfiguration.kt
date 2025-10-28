@@ -31,7 +31,7 @@ class BackendConfiguration {
         } else {
             val personRepository = InMemoryPersonRepository()
             val resource = FileSystemResourceLoader().getResource("file:${pathToDatafile}")
-            personRepository.personsDataCache = PersonsCreator.createPersonDataCache(resource)
+            personRepository.personsCache = PersonsCreator.createPersonDataCache(resource)
 
             return personRepository
         }

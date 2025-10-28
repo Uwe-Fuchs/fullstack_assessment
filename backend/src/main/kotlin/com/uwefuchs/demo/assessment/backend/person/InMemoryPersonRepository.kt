@@ -8,17 +8,23 @@ import java.util.Optional
 class InMemoryPersonRepository : PersonRepository {
     val logger: Logger = LoggerFactory.getLogger(this.javaClass)
 
-    lateinit var personsDataCache: List<Person>
+    lateinit var personsCache: List<Person>
 
     override fun findAll(): List<Person> {
-        return emptyList()
+        return personsCache
     }
 
     override fun findByColor(color: Color): List<Person> {
-        return emptyList()
+        return personsCache
+            .stream()
+            .filter { it.color == color }
+            .toList()
     }
 
     override fun findById(id: Int): Optional<Person> {
-        TODO("Not yet implemented")
+        return personsCache
+            .stream()
+            .filter { it.id == id }
+            .findFirst()
     }
 }
