@@ -3,10 +3,8 @@ package com.uwefuchs.demo.assecor_assessment.assecor_assessment.backend.person
 import com.uwefuchs.demo.assecor_assessment.assecor_assessment.backend.color.Color
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import org.springframework.stereotype.Component
 import java.util.Optional
 
-@Component
 class InMemoryPersonRepository : PersonRepository {
     val logger: Logger = LoggerFactory.getLogger(this.javaClass)
 
