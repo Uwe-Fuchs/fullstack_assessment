@@ -25,16 +25,20 @@ class PersonApiController {
 
     @GetMapping("/{id}")
     @ResponseStatus(code = HttpStatus.OK)
-    fun findByPersonId(@PathVariable id: Int): Any? {
-        return  personService.findPersonById(id)
-            .map { PersonEntityDtoMapper.mapEntityToDto(it) }
-            .orElseGet { null }  ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "No person found.")
+    fun findByPersonId(@PathVariable(required=true) id: Int): Any? {
+        val resultPerson = personService.findPersonById(id)
+
+        if (resultPerson.isPresent) {
+            return PersonEntityDtoMapper.mapEntityToDto(resultPerson.get())
+        } else {
+            throw ResponseStatusException(HttpStatus.NOT_FOUND, "No person found.")
+        }
     }
 
     @GetMapping("/color/{color}")
     @ResponseStatus(code = HttpStatus.OK)
-    fun findByColorId(@PathVariable color: Int): Any? {
-        val color = Color.findColorById(color) ?: return ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid color-id!")
+    fun findByColorId(@PathVariable(name="color", required=true) colorId: Int): Any? {
+        val color = Color.findColorById(colorId) ?: throw ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid color-id!")
 
         return personService.findPersonsByColor(color)
             .map { PersonEntityDtoMapper.mapEntityToDto(it) }
