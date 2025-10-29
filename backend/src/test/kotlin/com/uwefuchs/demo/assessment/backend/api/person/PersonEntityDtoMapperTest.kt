@@ -1,9 +1,7 @@
-package com.uwefuchs.demo.assessment.backend.helpers
+package com.uwefuchs.demo.assessment.backend.api.person
 
-import com.uwefuchs.demo.assessment.backend.api.person.Color
-import com.uwefuchs.demo.assessment.backend.api.person.Person
+import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
-import org.assertj.core.api.Assertions.assertThat
 
 class PersonEntityDtoMapperTest {
     @Test
@@ -12,7 +10,7 @@ class PersonEntityDtoMapperTest {
         val resultDto = PersonEntityDtoMapper.mapEntityToDto(personEntity)
 
         // then
-        assertThat(resultDto).isEqualTo(personDto)
+        Assertions.assertThat(resultDto).isEqualTo(personDto)
     }
 
     @Test
@@ -21,7 +19,7 @@ class PersonEntityDtoMapperTest {
         val resultDto = PersonEntityDtoMapper.mapEntityToDto(personEntityNoColor)
 
         // then
-        assertThat(resultDto.color).isNull()
+        Assertions.assertThat(resultDto.color).isNull()
     }
 
     @Test
@@ -30,7 +28,7 @@ class PersonEntityDtoMapperTest {
         val resultEntity = PersonEntityDtoMapper.mapDtoToEntity(personDto)
 
         // then
-        assertThat(resultEntity).isEqualTo(personEntity)
+        Assertions.assertThat(resultEntity).isEqualTo(personEntity)
     }
 
     @Test
@@ -39,7 +37,7 @@ class PersonEntityDtoMapperTest {
         val resultEntity = PersonEntityDtoMapper.mapDtoToEntity(personDtoNoColor)
 
         // then
-        assertThat(resultEntity.color).isNull()
+        Assertions.assertThat(resultEntity.color).isNull()
     }
 
     private val personEntity = Person(

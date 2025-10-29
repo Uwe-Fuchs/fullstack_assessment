@@ -1,4 +1,4 @@
-package com.uwefuchs.demo.assessment.backend.helpers
+package com.uwefuchs.demo.assessment.backend.api.person
 
 import com.fasterxml.jackson.annotation.JsonProperty
 
