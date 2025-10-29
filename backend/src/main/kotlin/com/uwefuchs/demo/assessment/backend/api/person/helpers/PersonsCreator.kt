@@ -1,4 +1,4 @@
-package com.uwefuchs.demo.assessment.backend.helpers
+package com.uwefuchs.demo.assessment.backend.api.person.helpers
 
 import com.uwefuchs.demo.assessment.backend.api.person.Color
 import com.uwefuchs.demo.assessment.backend.api.person.Person

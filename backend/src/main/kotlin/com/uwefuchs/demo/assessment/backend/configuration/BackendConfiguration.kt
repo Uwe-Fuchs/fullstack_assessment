@@ -1,6 +1,6 @@
 package com.uwefuchs.demo.assessment.backend.configuration
 
-import com.uwefuchs.demo.assessment.backend.helpers.PersonsCreator
+import com.uwefuchs.demo.assessment.backend.api.person.helpers.PersonsCreator
 import com.uwefuchs.demo.assessment.backend.api.person.InMemoryPersonRepository
 import com.uwefuchs.demo.assessment.backend.api.person.PersonRepository
 import org.slf4j.Logger

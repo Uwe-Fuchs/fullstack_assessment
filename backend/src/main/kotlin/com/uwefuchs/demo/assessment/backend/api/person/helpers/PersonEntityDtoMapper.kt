@@ -1,4 +1,8 @@
-package com.uwefuchs.demo.assessment.backend.api.person
+package com.uwefuchs.demo.assessment.backend.api.person.helpers
+
+import com.uwefuchs.demo.assessment.backend.api.person.Color
+import com.uwefuchs.demo.assessment.backend.api.person.Person
+import com.uwefuchs.demo.assessment.backend.api.person.PersonDto
 
 object PersonEntityDtoMapper {
     fun mapEntityToDto(entity: Person): PersonDto {
@@ -8,7 +12,8 @@ object PersonEntityDtoMapper {
             entity.lastName,
             entity.zipCode,
             entity.city,
-            entity.color?.colorStr)
+            entity.color?.colorStr
+        )
     }
 
     fun mapDtoToEntity(dto: PersonDto): Person {
@@ -18,7 +23,7 @@ object PersonEntityDtoMapper {
             dto.lastName,
             dto.zipCode,
             dto.city,
-            Color.findColorByColorStr(dto.color ?: "")
+            Color.Companion.findColorByColorStr(dto.color ?: "")
         )
     }
 }

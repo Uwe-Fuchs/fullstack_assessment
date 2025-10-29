@@ -1,5 +1,6 @@
 package com.uwefuchs.demo.assessment.backend.api.person
 
+import com.uwefuchs.demo.assessment.backend.api.person.helpers.PersonEntityDtoMapper
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.GetMapping

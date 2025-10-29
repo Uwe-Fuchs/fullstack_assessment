@@ -1,5 +1,6 @@
-package com.uwefuchs.demo.assessment.backend.api.person
+package com.uwefuchs.demo.assessment.backend.api.person.helpers
 
+import com.uwefuchs.demo.assessment.backend.api.person.Color
 import jakarta.persistence.AttributeConverter
 import jakarta.persistence.Converter
 
@@ -14,6 +15,6 @@ class ColorConverter : AttributeConverter<Color, Int> {
             return null
         }
 
-        return Color.findColorById(colorId)
+        return Color.Companion.findColorById(colorId)
     }
 }
