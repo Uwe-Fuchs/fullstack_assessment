@@ -11,19 +11,19 @@ enum class Color(val colorId: Int, val colorStr: String) {
 
     companion object {
         fun findColorById(colorId: Int): Color? {
-            return try {
-                Color.entries.first { it.colorId == colorId }
-            } catch(e: NoSuchElementException) {
-                null
-            }
+            return Color.entries
+                .stream()
+                .filter { it.colorId == colorId }
+                .findFirst()
+                .orElse(null)
         }
 
         fun findColorByColorStr(colorStr: String) : Color? {
-            return try {
-                Color.entries.first { it.colorStr == colorStr }
-            } catch(e: NoSuchElementException) {
-                null
-            }
+            return Color.entries
+                .stream()
+                .filter { it.colorStr == colorStr }
+                .findFirst()
+                .orElse(null)
         }
     }
 }

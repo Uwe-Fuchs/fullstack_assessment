@@ -13,5 +13,5 @@ data class PersonDto(
     val zipCode: String,
 
     val city: String,
-    val color: String
+    val color: String?
 )

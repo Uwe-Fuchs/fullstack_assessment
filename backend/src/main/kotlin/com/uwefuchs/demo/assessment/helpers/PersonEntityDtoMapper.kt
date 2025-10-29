@@ -11,7 +11,7 @@ object PersonEntityDtoMapper {
             entity.lastName,
             entity.zipCode,
             entity.city,
-            entity.color?.colorStr?:"")
+            entity.color?.colorStr)
     }
 
     fun mapDtoToEntity(dto: PersonDto): Person {
@@ -21,7 +21,7 @@ object PersonEntityDtoMapper {
             dto.lastName,
             dto.zipCode,
             dto.city,
-            Color.findColorByColorStr(dto.color)
+            Color.findColorByColorStr(dto.color ?: "")
         )
     }
 }
