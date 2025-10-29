@@ -21,19 +21,21 @@ class BackendConfiguration {
     @Value("\${person.repository.type.database}")
     var personRepositoryTypeDatabase: Boolean = false
 
-    @Autowired
+    //@Autowired
     var jpaPersonRepository: PersonRepository? = null
 
     @Bean
     fun personRepository(): PersonRepository {
         if (personRepositoryTypeDatabase) {
+            logger.info("using {}", jpaPersonRepository)
             return jpaPersonRepository!!
         } else {
-            val personRepository = InMemoryPersonRepository()
+            val inMemoryPersonRepository = InMemoryPersonRepository()
+            logger.info("using {}", inMemoryPersonRepository)
             val resource = FileSystemResourceLoader().getResource("file:${pathToDatafile}")
-            personRepository.personsCache = PersonsCreator.createPersonDataCache(resource)
+            inMemoryPersonRepository.personsCache = PersonsCreator.createPersonDataCache(resource)
 
-            return personRepository
+            return inMemoryPersonRepository
         }
     }
 }
