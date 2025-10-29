@@ -1,8 +1,8 @@
-package com.uwefuchs.demo.assessment.configuration
+package com.uwefuchs.demo.assessment.backend.configuration
 
-import com.uwefuchs.demo.assessment.helpers.PersonsCreator
-import com.uwefuchs.demo.assessment.backend.person.InMemoryPersonRepository
-import com.uwefuchs.demo.assessment.backend.person.PersonRepository
+import com.uwefuchs.demo.assessment.backend.helpers.PersonsCreator
+import com.uwefuchs.demo.assessment.backend.api.person.InMemoryPersonRepository
+import com.uwefuchs.demo.assessment.backend.api.person.PersonRepository
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired

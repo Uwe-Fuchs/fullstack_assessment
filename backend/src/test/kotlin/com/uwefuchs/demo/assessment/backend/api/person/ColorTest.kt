@@ -1,4 +1,4 @@
-package com.uwefuchs.demo.assessment.backend.color
+package com.uwefuchs.demo.assessment.backend.api.person
 
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test

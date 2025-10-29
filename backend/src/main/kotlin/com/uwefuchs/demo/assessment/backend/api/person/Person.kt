@@ -1,6 +1,5 @@
-package com.uwefuchs.demo.assessment.backend.person
+package com.uwefuchs.demo.assessment.backend.api.person
 
-import com.uwefuchs.demo.assessment.backend.color.Color
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue

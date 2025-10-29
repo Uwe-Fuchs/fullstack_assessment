@@ -1,7 +1,7 @@
-package com.uwefuchs.demo.assessment.helpers
+package com.uwefuchs.demo.assessment.backend.helpers
 
-import com.uwefuchs.demo.assessment.backend.color.Color
-import com.uwefuchs.demo.assessment.backend.person.Person
+import com.uwefuchs.demo.assessment.backend.api.person.Color
+import com.uwefuchs.demo.assessment.backend.api.person.Person
 
 object PersonEntityDtoMapper {
     fun mapEntityToDto(entity: Person): PersonDto {

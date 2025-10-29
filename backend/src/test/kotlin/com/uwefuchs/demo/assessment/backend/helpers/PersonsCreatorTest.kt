@@ -1,6 +1,6 @@
-package com.uwefuchs.demo.assessment.helpers
+package com.uwefuchs.demo.assessment.backend.helpers
 
-import com.uwefuchs.demo.assessment.backend.color.Color
+import com.uwefuchs.demo.assessment.backend.api.person.Color
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import org.springframework.core.io.ClassPathResource

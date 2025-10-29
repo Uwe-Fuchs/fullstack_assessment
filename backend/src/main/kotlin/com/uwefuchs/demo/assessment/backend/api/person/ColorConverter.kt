@@ -1,4 +1,4 @@
-package com.uwefuchs.demo.assessment.backend.color
+package com.uwefuchs.demo.assessment.backend.api.person
 
 import jakarta.persistence.AttributeConverter
 import jakarta.persistence.Converter

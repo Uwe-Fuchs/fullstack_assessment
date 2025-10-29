@@ -1,6 +1,5 @@
-package com.uwefuchs.demo.assessment.backend.person
+package com.uwefuchs.demo.assessment.backend.api.person
 
-import com.uwefuchs.demo.assessment.backend.color.Color
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired

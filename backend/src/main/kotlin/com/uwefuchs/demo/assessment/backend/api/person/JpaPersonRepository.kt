@@ -1,6 +1,5 @@
-package com.uwefuchs.demo.assessment.backend.person
+package com.uwefuchs.demo.assessment.backend.api.person
 
-import com.uwefuchs.demo.assessment.backend.color.Color
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 

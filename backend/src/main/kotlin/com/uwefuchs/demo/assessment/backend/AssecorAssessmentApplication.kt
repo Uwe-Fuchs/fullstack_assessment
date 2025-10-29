@@ -1,4 +1,4 @@
-package com.uwefuchs.demo.assessment
+package com.uwefuchs.demo.assessment.backend
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
