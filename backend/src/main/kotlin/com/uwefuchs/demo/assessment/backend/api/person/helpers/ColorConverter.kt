@@ -15,6 +15,6 @@ class ColorConverter : AttributeConverter<Color, Int> {
             return null
         }
 
-        return Color.Companion.findColorById(colorId)
+        return Color.findColorById(colorId)
     }
 }
