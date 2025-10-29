@@ -19,43 +19,24 @@ class PersonApiController {
     @GetMapping
     @ResponseStatus(code = HttpStatus.OK)
     fun findAll(): Any? {
-        val resultList = personService.findAllPersons()
-            .stream()
+        return personService.findAllPersons()
             .map { PersonEntityDtoMapper.mapEntityToDto(it) }
-            .toList()
-
-
-        return if (resultList.isEmpty()) {
-            throw ResponseStatusException(HttpStatus.NOT_FOUND)
-        } else {
-            resultList
-        }
     }
 
     @GetMapping("/{id}")
     @ResponseStatus(code = HttpStatus.OK)
-    fun findById(@PathVariable id: Int): Any? {
-        return try {
-            personService.findPersonById(id)
-                .map { PersonEntityDtoMapper.mapEntityToDto(it) }
-                .get()
-        } catch (e: NoSuchElementException) {
-            throw ResponseStatusException(HttpStatus.NOT_FOUND)
-        }
+    fun findByPersonId(@PathVariable id: Int): Any? {
+        return  personService.findPersonById(id)
+            .map { PersonEntityDtoMapper.mapEntityToDto(it) }
+            .orElseGet { null }  ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "No person found.")
     }
 
     @GetMapping("/color/{color}")
     @ResponseStatus(code = HttpStatus.OK)
-    fun findByColor(@PathVariable color: Color): Any? {
-        val resultList = personService.findPersonsByColor(color)
-            .stream()
-            .map { PersonEntityDtoMapper.mapEntityToDto(it) }
-            .toList()
+    fun findByColorId(@PathVariable color: Int): Any? {
+        val color = Color.findColorById(color) ?: return ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid color-id!")
 
-        return if (resultList.isEmpty()) {
-            throw ResponseStatusException(HttpStatus.NOT_FOUND)
-        } else {
-            resultList
-        }
+        return personService.findPersonsByColor(color)
+            .map { PersonEntityDtoMapper.mapEntityToDto(it) }
     }
 }
